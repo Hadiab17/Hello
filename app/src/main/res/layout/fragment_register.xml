@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	tools:context=".ui.fragments.register.RegisterFragment"
+	android:orientation="vertical"
+	android:gravity="center">
+	
+	<ImageView
+		android:layout_width="100dp"
+		android:layout_height="100dp"
+		android:src="@drawable/user_avatar"
+		android:id="@+id/avatar_img"
+		android:layout_marginTop="30dp"/>
+	
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:id="@+id/form_layout"
+		android:layout_marginHorizontal="20dp"
+		android:layout_marginVertical="40dp">
+		
+		<com.google.android.material.textfield.TextInputLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/nameEdtLayout"
+			android:hint="@string/name"
+			app:startIconDrawable="@drawable/ic_round_person_24"
+			style="@style/textInput"
+			android:layout_marginBottom="16dp">
+			
+			<com.google.android.material.textfield.TextInputEditText
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/nameEdt"
+				android:textColor="@color/philippineSilver"/>
+		
+		
+		</com.google.android.material.textfield.TextInputLayout>
+		
+		<com.google.android.material.textfield.TextInputLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/emailEdtLayout"
+			android:hint="@string/email"
+			app:startIconDrawable="@drawable/ic_round_email_24"
+			style="@style/textInput"
+			android:layout_marginBottom="16dp">
+			
+			<com.google.android.material.textfield.TextInputEditText
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/emailEdt"
+				android:textColor="@color/philippineSilver"/>
+		
+		
+		</com.google.android.material.textfield.TextInputLayout>
+		
+		<com.google.android.material.textfield.TextInputLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/passwordEdtLayout"
+			android:hint="@string/password"
+			app:startIconDrawable="@drawable/ic_round_lock_24"
+			style="@style/textInput"
+			app:passwordToggleEnabled="true"
+			app:passwordToggleTint="@color/philippineSilver">
+			
+			<com.google.android.material.textfield.TextInputEditText
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/passwordEdt"
+				android:textColor="@color/philippineSilver"/>
+		
+		
+		</com.google.android.material.textfield.TextInputLayout>
+		
+	
+	</LinearLayout>
+	
+	<androidx.appcompat.widget.AppCompatButton
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/submit"
+		android:layout_marginHorizontal="20dp"
+		android:id="@+id/submit_button"
+		android:background="@drawable/bg_submit_btn"/>
+	
+	<ProgressBar
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="-50dp"
+		android:visibility="gone"
+		android:id="@+id/spalsh_progress_bar"/>
+
+</LinearLayout>
